@@ -15,9 +15,9 @@ pipeline {
            }
 
            stage ('Build') {
-               steps {
-                   echo 'This is a minimal pipeline.'
-               }
+             steps {
+                       sh 'mvn clean install -dSkipTest=true'
+                  }
            }
        }
 }
