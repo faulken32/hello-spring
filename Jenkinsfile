@@ -1,5 +1,7 @@
 pipeline {
-     agent { dockerfile true }
+   agent {
+           docker { image 'adoptopenjdk/openjdk11:ubi' }
+       }
 //      tools {
 //             maven 'mvn'
 //             jdk 'java11'
