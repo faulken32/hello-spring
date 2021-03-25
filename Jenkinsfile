@@ -2,7 +2,7 @@ pipeline {
     agent any
      tools {
             maven 'mvn'
-            jdk 'jdk8'
+            jdk 'java11'
         }
     stages {
            stage ('Initialize') {
@@ -16,7 +16,7 @@ pipeline {
 
            stage ('Build') {
              steps {
-                       sh 'mvn clean install -dSkipTest=true'
+                       sh 'mvn clean install -DSkipTest=true'
                   }
            }
        }
