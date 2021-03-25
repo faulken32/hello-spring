@@ -1,6 +1,6 @@
 pipeline {
    agent {
-           docker { image 'adoptopenjdk/openjdk11:ubi' }
+           kubernetes { image 'adoptopenjdk/openjdk11:ubi' }
        }
 //      tools {
 //             maven 'mvn'
